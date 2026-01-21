@@ -1,7 +1,6 @@
 import XCTest
 
 final class BerlinClockAppUITestsLaunchTests: XCTestCase {
-
     override class var runsForEachTargetApplicationUIConfiguration: Bool {
         true
     }

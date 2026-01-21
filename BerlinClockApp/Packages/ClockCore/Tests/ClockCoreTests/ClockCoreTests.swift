@@ -1,5 +1,5 @@
-import XCTest
 @testable import ClockCore
+import XCTest
 
 final class ClockCoreTests: XCTestCase {
     func testExample() throws {

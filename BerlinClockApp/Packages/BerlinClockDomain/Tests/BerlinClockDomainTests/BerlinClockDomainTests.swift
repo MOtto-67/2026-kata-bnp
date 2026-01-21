@@ -1,6 +1,6 @@
-import XCTest
-import ClockCore
 @testable import BerlinClockDomain
+import ClockCore
+import XCTest
 
 final class BerlinClockDomainTests: XCTestCase {
     func test_even_seconds_turn_seconds_lamp_on() throws {
@@ -29,5 +29,15 @@ final class BerlinClockDomainTests: XCTestCase {
 
         XCTAssertEqual(state.fiveHours, [.hour, .hour, .off, .off])
         XCTAssertEqual(state.oneHours, [.hour, .hour, .hour, .off])
+    }
+
+    func test_quarter() throws {
+        let time = try Time(hours: 0, minutes: 15, seconds: 0)
+        let sut = BerlinClockConverter()
+
+        let state = try sut.convert(time)
+
+        XCTAssertEqual(state.fiveMinutes,
+                       [.minute, .minute, .quarterMarker, .off, .off, .off, .off, .off, .off, .off, .off])
     }
 }
