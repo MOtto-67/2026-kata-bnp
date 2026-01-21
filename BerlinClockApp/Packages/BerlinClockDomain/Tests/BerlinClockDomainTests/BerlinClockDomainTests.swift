@@ -40,4 +40,13 @@ final class BerlinClockDomainTests: XCTestCase {
         XCTAssertEqual(state.fiveMinutes,
                        [.minute, .minute, .quarterMarker, .off, .off, .off, .off, .off, .off, .off, .off])
     }
+
+    func test_one_minutes() throws {
+        let time = try Time(hours: 0, minutes: 17, seconds: 0)
+        let sut = BerlinClockConverter()
+
+        let state = try sut.convert(time)
+
+        XCTAssertEqual(state.oneMinutes, [.minute, .minute, .off, .off])
+    }
 }

@@ -18,13 +18,15 @@ public struct BerlinClockConverter {
             guard index < fiveMinutesOn else { return .off }
             return (index + 1) % 3 == 0 ? .quarterMarker : .minute
         }
+        let oneMinutesOn = time.minutes % 5
+        let oneMinutes: [LampKind] = (0 ..< 4).map { $0 < oneMinutesOn ? .minute : .off }
 
         return try ClockState(
             seconds: seconds,
             fiveHours: fiveHours,
             oneHours: oneHours,
             fiveMinutes: fiveMinutes,
-            oneMinutes: [.off, .off, .off, .off]
+            oneMinutes: oneMinutes
         )
     }
 }
