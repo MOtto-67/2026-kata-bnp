@@ -8,10 +8,16 @@ public struct BerlinClockConverter {
             time.seconds % 2 == 0 ? .second : .off
         ]
 
+        let fiveHoursOn = time.hours / 5
+        let oneHoursOn = time.hours % 5
+
+        let fiveHours: [LampKind] = (0..<4).map { $0 < fiveHoursOn ? .hour : .off }
+        let oneHours: [LampKind] = (0..<4).map { $0 < oneHoursOn ? .hour : .off }
+
         return try ClockState(
             seconds: seconds,
-            fiveHours: [.off, .off, .off, .off],
-            oneHours: [.off, .off, .off, .off],
+            fiveHours: fiveHours,
+            oneHours: oneHours,
             fiveMinutes: Array(repeating: .off, count: 11),
             oneMinutes: [.off, .off, .off, .off]
         )
