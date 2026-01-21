@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		A0D9265F2F20D8E10036EF1A /* ClockCore in Frameworks */ = {isa = PBXBuildFile; productRef = A0D9265E2F20D8E10036EF1A /* ClockCore */; };
 		A0D9266E2F20DBC00036EF1A /* BerlinClockDomain in Frameworks */ = {isa = PBXBuildFile; productRef = A0D9266D2F20DBC00036EF1A /* BerlinClockDomain */; };
+		A0DD56D62F2124E2002872D4 /* ClockTime in Frameworks */ = {isa = PBXBuildFile; productRef = A0DD56D52F2124E2002872D4 /* ClockTime */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +59,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A0D9265F2F20D8E10036EF1A /* ClockCore in Frameworks */,
+				A0DD56D62F2124E2002872D4 /* ClockTime in Frameworks */,
 				A0D9266E2F20DBC00036EF1A /* BerlinClockDomain in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -121,6 +123,7 @@
 			packageProductDependencies = (
 				A0D9265E2F20D8E10036EF1A /* ClockCore */,
 				A0D9266D2F20DBC00036EF1A /* BerlinClockDomain */,
+				A0DD56D52F2124E2002872D4 /* ClockTime */,
 			);
 			productName = BerlinClockApp;
 			productReference = A0D925F22F20BE830036EF1A /* BerlinClockApp.app */;
@@ -207,6 +210,7 @@
 			packageReferences = (
 				A0D9265D2F20D8E10036EF1A /* XCLocalSwiftPackageReference "Packages/ClockCore" */,
 				A0D9266C2F20DBC00036EF1A /* XCLocalSwiftPackageReference "Packages/BerlinClockDomain" */,
+				A0DD56D42F2124E2002872D4 /* XCLocalSwiftPackageReference "Packages/ClockTime" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = A0D925F32F20BE830036EF1A /* Products */;
@@ -593,6 +597,10 @@
 			isa = XCLocalSwiftPackageReference;
 			relativePath = Packages/BerlinClockDomain;
 		};
+		A0DD56D42F2124E2002872D4 /* XCLocalSwiftPackageReference "Packages/ClockTime" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = Packages/ClockTime;
+		};
 /* End XCLocalSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -603,6 +611,10 @@
 		A0D9266D2F20DBC00036EF1A /* BerlinClockDomain */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = BerlinClockDomain;
+		};
+		A0DD56D52F2124E2002872D4 /* ClockTime */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = ClockTime;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
