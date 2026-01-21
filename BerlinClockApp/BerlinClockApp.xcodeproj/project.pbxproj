@@ -6,6 +6,10 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		A0D9265F2F20D8E10036EF1A /* ClockCore in Frameworks */ = {isa = PBXBuildFile; productRef = A0D9265E2F20D8E10036EF1A /* ClockCore */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		A0D926002F20BE860036EF1A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -52,6 +56,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A0D9265F2F20D8E10036EF1A /* ClockCore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -112,6 +117,7 @@
 			);
 			name = BerlinClockApp;
 			packageProductDependencies = (
+				A0D9265E2F20D8E10036EF1A /* ClockCore */,
 			);
 			productName = BerlinClockApp;
 			productReference = A0D925F22F20BE830036EF1A /* BerlinClockApp.app */;
@@ -195,6 +201,9 @@
 			);
 			mainGroup = A0D925E92F20BE830036EF1A;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				A0D9265D2F20D8E10036EF1A /* XCLocalSwiftPackageReference "Packages/ClockCore" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = A0D925F32F20BE830036EF1A /* Products */;
 			projectDirPath = "";
@@ -570,6 +579,20 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCLocalSwiftPackageReference section */
+		A0D9265D2F20D8E10036EF1A /* XCLocalSwiftPackageReference "Packages/ClockCore" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = Packages/ClockCore;
+		};
+/* End XCLocalSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		A0D9265E2F20D8E10036EF1A /* ClockCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = ClockCore;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = A0D925EA2F20BE830036EF1A /* Project object */;
 }
