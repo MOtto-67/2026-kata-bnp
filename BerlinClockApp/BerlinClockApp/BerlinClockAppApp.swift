@@ -1,10 +1,14 @@
+import Bootstrap
 import SwiftUI
 
 @main
-struct BerlinClockAppApp: App {
+struct BerlinClockApp: App {
+    let bootstrap = Bootstrap.makeDefault()
+
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            AppRootSceneView()
+                .environment(bootstrap)
         }
     }
 }
