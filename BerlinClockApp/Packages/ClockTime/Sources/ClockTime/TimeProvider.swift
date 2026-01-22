@@ -9,15 +9,24 @@ public struct TimeProvider<Provider: TimeProviderPrococol>: Sendable {
 
     public func stream(intervalSeconds: UInt64 = 1) -> AsyncStream<Time> {
         AsyncStream { continuation in
-            Task {
+            let task = Task {
+                if let time = try? provider.now() {
+                    continuation.yield(time)
+                }
+
                 while !Task.isCancelled {
+                    try? await Task.sleep(nanoseconds: intervalSeconds * Constant.oneSecond)
+                    guard !Task.isCancelled else { break }
+
                     if let time = try? provider.now() {
                         continuation.yield(time)
                     }
-
-                    try? await Task.sleep(nanoseconds: intervalSeconds * Constant.oneSecond)
                 }
+
+                continuation.finish()
             }
+
+            continuation.onTermination = { _ in task.cancel() }
         }
     }
 }
