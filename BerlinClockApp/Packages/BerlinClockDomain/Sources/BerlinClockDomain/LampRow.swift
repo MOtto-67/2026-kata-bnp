@@ -6,7 +6,7 @@ struct LampRow {
     let kindForIndex: (Int) -> LampKind
 
     func make() -> [LampKind] {
-        (0..<lampCount).map { index in
+        (0 ..< lampCount).map { index in
             index < litCount ? kindForIndex(index) : .off
         }
     }

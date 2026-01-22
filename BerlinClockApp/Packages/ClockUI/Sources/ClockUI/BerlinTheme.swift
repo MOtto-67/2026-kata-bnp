@@ -1,5 +1,5 @@
-import SwiftUI
 import ClockCore
+import SwiftUI
 
 public struct BerlinTheme: ClockTheme {
     public init() {}
@@ -7,15 +7,15 @@ public struct BerlinTheme: ClockTheme {
     public func style(for kind: LampKind) -> LampStyle {
         switch kind {
         case .off:
-            return LampStyle(color: .gray.opacity(0.2))
+            return LampStyle(onColor: .clear)
         case .second:
-            return LampStyle(color: .yellow)
+            return LampStyle(onColor: .yellow)
         case .hour:
-            return LampStyle(color: .red)
+            return LampStyle(onColor: .red)
         case .minute:
-            return LampStyle(color: .yellow)
+            return LampStyle(onColor: .yellow)
         case .quarterMarker:
-            return LampStyle(color: .red)
+            return LampStyle(onColor: .red, glowOpacity: 0.5)
         }
     }
 }

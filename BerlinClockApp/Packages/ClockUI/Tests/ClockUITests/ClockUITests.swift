@@ -1,5 +1,5 @@
-import XCTest
 @testable import ClockUI
+import XCTest
 
 final class ClockUITests: XCTestCase {
     func testExample() throws {
